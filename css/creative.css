@@ -323,7 +323,8 @@ header .header-content .header-content-inner p {
 }
 
 .text-primary {
-    color: #f05f40;
+    /* previous: f05f40 */
+    color: #222;
 }
 
 .no-gutter > [class*=col-] {
