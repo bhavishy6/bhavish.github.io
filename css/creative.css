@@ -31,6 +31,10 @@ a {
     transition: all .35s;
 }
 
+a.projects-box {
+    color: #222;
+}
+
 a:hover,
 a:focus {
     color: #eb3812;
@@ -72,8 +76,8 @@ aside {
     padding: 50px 0;
 }
 
-.no-padding {
-    padding: 0;
+#projects {
+    padding: 100px 0 0 0;
 }
 
 .navbar-default {
@@ -323,8 +327,7 @@ header .header-content .header-content-inner p {
 }
 
 .text-primary {
-    /* previous: f05f40 */
-    color: #222;
+    color: #f05f40;
 }
 
 .no-gutter > [class*=col-] {
