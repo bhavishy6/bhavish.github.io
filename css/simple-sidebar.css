@@ -43,6 +43,10 @@
     padding: 15px;
 }
 
+.container-fluid {
+    top: 125%;
+}
+
 #wrapper.toggled #page-content-wrapper {
     position: absolute;
     margin-right: -250px;
@@ -52,7 +56,7 @@
 
 .sidebar-nav {
     position: absolute;
-    top: 0;
+    top: 15%;
     width: 250px;
     margin: 0;
     padding: 0;
@@ -116,7 +120,8 @@
     #page-content-wrapper {
         padding: 20px;
         position: relative;
-    }
+        top: 5%;
+}
 
     #wrapper.toggled #page-content-wrapper {
         position: relative;
