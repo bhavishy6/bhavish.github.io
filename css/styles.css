@@ -1,3 +1,7 @@
+span#nameheader {
+    background: #00000;
+}
+
 ul.tiles {
     margin: 15px -30px 15px -15px;
     padding: 0;
