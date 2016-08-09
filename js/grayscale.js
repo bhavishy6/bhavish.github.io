@@ -5,11 +5,28 @@
  */
 
 // jQuery to collapse the navbar on scroll
+//$(window).scroll(function() {
+//    if ($(".navbar").offset().top > 50) {
+//        $(".navbar-fixed-top").addClass("top-nav-collapse");
+//    } else {
+//        $(".navbar-fixed-top").removeClass("top-nav-collapse");
+//    }
+//});
+
+// jQuery to collapse the name box to intials Box on scroll
 $(window).scroll(function() {
-    if ($(".navbar").offset().top > 50) {
-        $(".navbar-fixed-top").addClass("top-nav-collapse");
+    if ($("#nameheader").offset().top > 75) {
+        $(".navbar-brand").addClass("nameheader-collapse");
+        $("span.lower").fadeOut(100);
+
+
+//        $("span#nameheader").html('<span class="light">B</span>Y');
     } else {
-        $(".navbar-fixed-top").removeClass("top-nav-collapse");
+        $(".navbar-brand").removeClass("nameheader-collapse");
+        $(".navbar-brand").remov
+//        $("span#nameheader").html('<span class="light">Bhavish</span> Yalamanchi');
+                $("span.lower").fadeIn(100);
+
     }
 });
 

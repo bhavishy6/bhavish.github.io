@@ -1,5 +1,46 @@
-span#nameheader {
-    background: #00000;
+a.navbar-brand > span#nameheader {
+    background: black;
+    padding: 13px;
+    float: left;
+    margin-left: -70px
+}
+
+a.navbar-brand:hover
+{
+        box-shadow:
+                1px 1px #53a7ea,
+                2px 2px #53a7ea,
+                3px 3px #53a7ea;
+        -webkit-transform: translateX(-3px);
+        transform: translateX(-3px);
+}
+
+a.nameheader-collapse {
+  width: 1%;
+  -webkit-transition: width 0.35s ease;
+  -moz-transition: width 0.35s ease;
+  -o-transition: width 0.35s ease;
+  transition: width 10s ease;
+}
+
+span#nameheader > span.light {
+    font-weight: 100;
+}
+
+.span#nameheader.sl-w1{
+	color:#fff;
+	text-shadow:0px 0px 1px #fff;
+	z-index:2;
+}
+.span#nameheader.sl-w2{
+	color:#e82760;
+	text-shadow:-1px 1px 2px #9f0633;
+	z-index:3;
+}
+
+p.intro-text {
+    border: 1px;
+    background: #fff;
 }
 
 ul.tiles {
