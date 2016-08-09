@@ -59,9 +59,10 @@ li.project_tile {
     color: #000;
     font-size: .8em;
     font-family: arial,sans-serif;
-    -webkit-box-shadow: 1px 1px 5px rgba(0,0,0,.6);
-    -moz-box-shadow: 1px 1px 5px rgba(0,0,0,.6);
-    box-shadow: 1px 1px 5px rgba(0,0,0,.6);
+    -webkit-box-shadow: 1px 1px 1px rgba(0,0,0,.6);
+    -moz-box-shadow: 1px 1px 1px rgba(0,0,0,.6);
+    box-shadow: 1px 1px 1px rgba(0,0,0,.6);
+    list-style-type: none;
 }
 
 li.project_tile > a {

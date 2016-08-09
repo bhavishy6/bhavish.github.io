@@ -15,9 +15,14 @@
 
 // jQuery to collapse the name box to intials Box on scroll
 $(window).scroll(function() {
-    if ($("#nameheader").offset().top > 75) {
-        $(".navbar-brand").addClass("nameheader-collapse");
-        $("span.lower").fadeOut(100);
+    if ($(".navbar").offset().top > 50) {
+        $(".navbar-fixed-top").addClass("top-nav-collapse");
+    } else {
+        $(".navbar-fixed-top").removeClass("top-nav-collapse");
+    }
+    // if ($("#nameheader").offset().top > 75) {
+    //     $(".navbar-brand").addClass("nameheader-collapse");
+    //     $("span.lower").fadeOut(100);
 
 
 //        $("span#nameheader").html('<span class="light">B</span>Y');
@@ -65,7 +70,7 @@ function init() {
         scrollwheel: false,
         draggable: false,
 
-        // How you would like to style the map. 
+        // How you would like to style the map.
         // This is where you would paste any style found on Snazzy Maps.
         styles: [{
             "featureType": "water",
@@ -177,7 +182,7 @@ function init() {
         }]
     };
 
-    // Get the HTML DOM element that will contain your map 
+    // Get the HTML DOM element that will contain your map
     // We are using a div with id="map" seen below in the <body>
     var mapElement = document.getElementById('map');
 
