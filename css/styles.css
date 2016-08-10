@@ -1,10 +1,19 @@
 a.navbar-brand > span#nameheader {
     background: black;
-    padding: 13px;
+    padding: 3px 13px;
     float: left;
     margin-left: -70px
 }
 
+div.navbar-right > span.nameheader {
+    background: black;
+    /*padding: 13px;*/
+    float: right;
+    margin-left: -70px
+}
+a.navbar-brand {
+    padding: 0px, 15px;
+}
 a.navbar-brand:hover
 {
         box-shadow:
@@ -98,20 +107,24 @@ div.wip {
 }
 
 div.panel {
-    -webkit-border-radius: 15px;
+    /*-webkit-border-radius: 15px;
     -moz-border-radius: 15px;
-    border-radius: 15px;
+    border-radius: 15px;*/
 }
 
 div.panel_title {
 
 }
 
-p.panel_body {
+div.box {
+    height:100%;
+}
+
+/*p.panel_body {
     color: black;
     font-size:15px;
     text-align:left;
-    padding: 0 10px;
+    padding: 0 10px;*/
 }
 
 footer p{

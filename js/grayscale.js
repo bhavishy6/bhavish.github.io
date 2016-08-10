@@ -3,16 +3,6 @@
  * Code licensed under the Apache License v2.0.
  * For details, see http://www.apache.org/licenses/LICENSE-2.0.
  */
-
-// jQuery to collapse the navbar on scroll
-//$(window).scroll(function() {
-//    if ($(".navbar").offset().top > 50) {
-//        $(".navbar-fixed-top").addClass("top-nav-collapse");
-//    } else {
-//        $(".navbar-fixed-top").removeClass("top-nav-collapse");
-//    }
-//});
-
 // jQuery to collapse the name box to intials Box on scroll
 $(window).scroll(function() {
     if ($(".navbar").offset().top > 50) {
@@ -20,19 +10,35 @@ $(window).scroll(function() {
     } else {
         $(".navbar-fixed-top").removeClass("top-nav-collapse");
     }
-    // if ($("#nameheader").offset().top > 75) {
-    //     $(".navbar-brand").addClass("nameheader-collapse");
-    //     $("span.lower").fadeOut(100);
 
-
-//        $("span#nameheader").html('<span class="light">B</span>Y');
+    if ($("#nameheader").offset().top > 75) {
+        // $(".navbar-brand").addClass("nameheader-collapse");
+        $("span.lower").fadeOut(100);
+       $("span#nameheader").html('[<span class="light">B</span>Y]');
     } else {
-        $(".navbar-brand").removeClass("nameheader-collapse");
-        $(".navbar-brand").remov
-//        $("span#nameheader").html('<span class="light">Bhavish</span> Yalamanchi');
-                $("span.lower").fadeIn(100);
-
+        // $(".navbar-brand").removeClass("nameheader-collapse");
+       $("span#nameheader").html('<span class="light">Bhavish</span> Yalamanchi');
+       $("span.lower").fadeIn(100);
     }
+});
+
+$(document).ready(function(){
+    $('span#creations_title').click(function() {
+        console.log("creations clicked");
+        var speed = 'slow';
+		$('#projects_panel').fadeOut(speed ,function(){
+            console.log("projects fade out");
+			$('#creations_panel').fadeIn(speed);
+		});
+    });
+    $('span#projects_title').click(function() {
+        console.log("projects clicked");
+        var speed = 'slow';
+		$('#creations_panel').fadeOut(speed ,function(){
+            console.log("creations fade out");
+			$('#projects_panel').fadeIn(speed);
+		});
+    });
 });
 
 // jQuery for page scrolling feature - requires jQuery Easing plugin
