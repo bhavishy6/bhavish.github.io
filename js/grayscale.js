@@ -23,20 +23,26 @@ $(window).scroll(function() {
 });
 
 $(document).ready(function(){
-    $('span#creations_title').click(function() {
+    $('li#slider_creations').click(function() {
         console.log("creations clicked");
         var speed = 'slow';
 		$('#projects_panel').fadeOut(speed ,function(){
             console.log("projects fade out");
 			$('#creations_panel').fadeIn(speed);
+            $('#nav-projects').text("Creations");
+            $('li#slider_projects').removeClass("current");
+            $('li#slider_creations').addClass("current");
 		});
     });
-    $('span#projects_title').click(function() {
+    $('li#slider_projects').click(function() {
         console.log("projects clicked");
         var speed = 'slow';
 		$('#creations_panel').fadeOut(speed ,function(){
             console.log("creations fade out");
 			$('#projects_panel').fadeIn(speed);
+            $('#nav-projects').text("Projects");
+            $('li#slider_creations').removeClass("current");
+            $('li#slider_projects').addClass("current");
 		});
     });
 });
