@@ -151,6 +151,47 @@ span#nameheader > span.light {
 	transition: stroke-dashoffset 0.3s, opacity 0.15s;
 }
 
+#creationsmenu {
+    margin-left: auto;
+    margin-bottom: 41px;
+    margin-right: auto;
+    margin-top: 18px;
+    width: 330px;
+    font-size: 26px;
+    font-family: 'CenturyGothic';
+}
+
+#creationsmenu h4 {
+    width: 50%;
+    float: left;
+    cursor: pointer;
+    margin: 0;
+    height: 25px;
+    font-size: 16px;
+}
+
+#menuline {
+    margin: 0px auto;
+    width: 330px;
+    padding-bottom: 15px;
+    margin-bottom: 1em;
+}
+
+#menuline div {
+    width: 50%;
+    float: left;
+    height: 3px;
+    opacity: 0.5px;
+}
+#menuline div:nth-child(1) {
+    background-color: #d70000;
+}
+
+#menuline div:nth-child(2) {
+    background-color: #ffea00;
+}
+
+
 p.intro-text {
     border: 1px;
     background: #fff;

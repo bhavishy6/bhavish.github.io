@@ -22,29 +22,63 @@ $(window).scroll(function() {
     }
 });
 
+var showCreations = function() {
+    console.log("creations clicked");
+    var speed = 'slow';
+    $('#projects_panel').fadeOut(speed ,function(){
+        console.log("projects fade out");
+        $('#creations_panel').fadeIn(speed);
+        $('#nav-projects').text("Creations");
+        $('li#slider_projects').removeClass("current");
+        $('li#slider_creations').addClass("current");
+    });
+};
+
+var showProjects = function() {
+    console.log("projects clicked");
+    var speed = 'slow';
+    $('#creations_panel').fadeOut(speed ,function(){
+        console.log("creations fade out");
+        $('#projects_panel').fadeIn(speed);
+        $('#nav-projects').text("Projects");
+        $('li#slider_creations').removeClass("current");
+        $('li#slider_projects').addClass("current");
+    });
+};
+
 $(document).ready(function(){
-    $('li#slider_creations').click(function() {
-        console.log("creations clicked");
-        var speed = 'slow';
-		$('#projects_panel').fadeOut(speed ,function(){
-            console.log("projects fade out");
-			$('#creations_panel').fadeIn(speed);
-            $('#nav-projects').text("Creations");
-            $('li#slider_projects').removeClass("current");
-            $('li#slider_creations').addClass("current");
-		});
-    });
-    $('li#slider_projects').click(function() {
-        console.log("projects clicked");
-        var speed = 'slow';
-		$('#creations_panel').fadeOut(speed ,function(){
-            console.log("creations fade out");
-			$('#projects_panel').fadeIn(speed);
-            $('#nav-projects').text("Projects");
-            $('li#slider_creations').removeClass("current");
-            $('li#slider_projects').addClass("current");
-		});
-    });
+    $('li#slider_creations').click(showCreations);
+    $('li#slider_projects').click(showProjects);
+    $('a#creations_click').click(showCreations);
+
+	$("#creationsmenu h4:nth-child(1)").hover(function () {
+		$("#menuline div:nth-child(1)").stop().animate({
+			opacity: "1"
+		}, "fast");
+	}, function () {
+		$("#menuline h4:nth-child(1)").stop().animate({
+			opacity: ".5"
+		}, "slow");
+	});
+	$("#creationsmenu h4:nth-child(2)").hover(function () {
+		$("#menuline div:nth-child(2)").stop().animate({
+			opacity: "1"
+		}, "fast");
+	}, function () {
+		$("#menuline div:nth-child(2)").stop().animate({
+			opacity: ".5"
+		}, "slow");
+	});
+    $('#creationsmenu h4').click(function(){
+		var speed = 'slow';
+		var panels = [$('#soundcloud_panel'),$('#slydes_panel')];
+		var index = $(this).index();
+		if($('.creations_box:visible').index()!=(index+1)){
+			$('.creations_box:visible').fadeOut(speed ,function(){
+				panels[index].fadeIn(speed);
+			});
+		}
+	});
 });
 
 // jQuery for page scrolling feature - requires jQuery Easing plugin
