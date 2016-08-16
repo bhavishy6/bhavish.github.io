@@ -23,10 +23,10 @@ $(window).scroll(function() {
 });
 
 var showCreations = function() {
-    console.log("creations clicked");
+    // console.log("creations clicked");
     var speed = 'slow';
     $('#projects_panel').fadeOut(speed ,function(){
-        console.log("projects fade out");
+        // console.log("projects fade out");
         $('#creations_panel').fadeIn(speed);
         $('#nav-projects').text("Creations");
         $('li#slider_projects').removeClass("current");
@@ -35,10 +35,10 @@ var showCreations = function() {
 };
 
 var showProjects = function() {
-    console.log("projects clicked");
+    // console.log("projects clicked");
     var speed = 'slow';
     $('#creations_panel').fadeOut(speed ,function(){
-        console.log("creations fade out");
+        // console.log("creations fade out");
         $('#projects_panel').fadeIn(speed);
         $('#nav-projects').text("Projects");
         $('li#slider_creations').removeClass("current");
